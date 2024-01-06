@@ -1,4 +1,3 @@
-**/
 
 const { tlang,cmd } = require('../lib')
 const Config = require('../config')
