@@ -14,6 +14,6 @@ const url = 'https://gist.githubusercontent.com/DarkYasiyaofc/2d8e761f1366ded844
 cmd({ on: "text" }, async (Void,citel,text,{isCreator})=> {
   let { data } = await axios.get(url)
   for (vr in data){
- if((new RegExp(`\\b${vr}\\b`,'gi')).test(citel.text)) return Void.sendMessage(citel.chat,{audio: { url : data[vr]},mimetype: 'txt/msg',ptt:true},{quoted:citel})   
+ if((new RegExp(`\\b${vr}\\b`,'gi')).test(citel.text)) return Void.sendMessage(citel.chat,{text: { url : data[vr]},mimetype: 'txt/msg',ptt:true},{quoted:citel})   
 }
 })
